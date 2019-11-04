@@ -1,3 +1,19 @@
+## Objetivos
+Evaluar las diferencias del rendimiento de consultas a una base de datos con la diferencia de unsigned en enteros, y posiblemente en flotantes (dobles (?)) con los siguientes casos de uso en consideración.
+
+- Inserción de una columna con autoincremento en int  (caso práctico, ID)
+- Inserción de una columna sin autoincremento en int (posiblemente en otras también)
+- Consulta de una base de datos relacional con esquemas signed y unsigned (relaciones de ID's)
+- Inner Joins, Outer Joins y demás respecto a unsigned.
+- Consulta de sumatorias, multiplicaciones y `GROUP BY` en general de cualquier tipo de dato
+
+Lo ideal es conocer si tenemos alguna referencia respecto a unsigned, y signed data.
+
+Los dos escenarios principales son:
+- El performance respecto a ID's. Inserción, actualización, y muestreo de los datos. Esto afecta enormemente a datos relacionales y bases de datos con chequeo de multiples tablas.
+- El performance de Sumas, multiplicaciones y tratamiento de datos en general.
+
+
 ## Delimitaciones
 
 De acuerdo al artículo **10.1002/jcb.25049** las pruebas se hicieron en una computadora personal, con *100 simulations*... supongo que no tienen que ser millones de pruebas con millones de datos.
