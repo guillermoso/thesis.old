@@ -1,3 +1,7 @@
+> Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
+>
+> - [High Performance MySQL, Capítulo 4](https://www.oreilly.com/library/view/high-performance-mysql/9781449332471/ch04.html)
+
 ## Objetivos
 Evaluar las diferencias del rendimiento de consultas a una base de datos con la diferencia de unsigned en enteros, y posiblemente en flotantes (dobles (?)) con los siguientes casos de uso en consideración.
 
@@ -25,6 +29,12 @@ Interesante estructura y organizacion de archivos Latex
 https://github.com/montyluis/paper
 
 
+Excelente evaluación general de MySQL por medio de lecturas lógicas y físicas
+http://uvadoc.uva.es/bitstream/handle/10324/14120/TFG-G1192.pdf?sequence=1&isAllowed=y
+
+Esteban Mínguez, S. (2015). Solución a un problema de Rendimiento en MySQL. Optimización de UVa Online Judge.
+
+
 Posibles ideas de estructuras
 
 10.1145/1878537.1878641
@@ -43,3 +53,41 @@ https://www.hammerdb.com/
 
 https://github.com/STSSoft/DatabaseBenchmark
 
+
+---
+
+> An Updated Performance Comparison of Virtual Machines and Linux Containers
+
+10.1109/ISPASS.2015.7095802
+
+---
+
+> Performance Comparison for Data Storage - Db4o and MySQL Databases 
+
+10.1109/IC3.2014.6897167
+
+---
+
+> MySQL Performance Analysis on a Limited Resource Server:  Fedora vs. Ubuntu Linux 
+
+10.1145/1878537.1878641
+
+---
+
+> Solución a un problema de Rendimiento en MySQL
+
+http://uvadoc.uva.es/bitstream/handle/10324/14120/TFG-G1192.pdf?sequence=1&isAllowed=y
+
+---
+
+> Benchmarking Database Performance for Genomic Data
+
+10.1002/jcb.25049
+
+---
+
+> Pipes, Jay. "Performance tuning best practices." (2010).
+
+http://bbs.linuxtone.org/docs/ebooks/MySQL/performance-tuning-best-practices.pdf
+
+---
