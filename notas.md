@@ -1,6 +1,12 @@
+Comparativa del rendimiento entre registros con con ID entero sin signo y con signo.
+
 > Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
 >
-> - [High Performance MySQL, Capítulo 4](https://www.oreilly.com/library/view/high-performance-mysql/9781449332471/ch04.html)
+> \-- [High Performance MySQL, Capítulo 4](https://www.oreilly.com/library/view/high-performance-mysql/9781449332471/ch04.html)
+
+## Definición del problema
+
+¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos?
 
 ## Objetivos
 Evaluar las diferencias del rendimiento de consultas a una base de datos con la diferencia de unsigned en enteros, y posiblemente en flotantes (dobles (?)) con los siguientes casos de uso en consideración.
@@ -31,8 +37,6 @@ https://github.com/montyluis/paper
 
 Excelente evaluación general de MySQL por medio de lecturas lógicas y físicas
 http://uvadoc.uva.es/bitstream/handle/10324/14120/TFG-G1192.pdf?sequence=1&isAllowed=y
-
-Esteban Mínguez, S. (2015). Solución a un problema de Rendimiento en MySQL. Optimización de UVa Online Judge.
 
 
 Posibles ideas de estructuras
@@ -77,6 +81,8 @@ https://github.com/STSSoft/DatabaseBenchmark
 > Solución a un problema de Rendimiento en MySQL
 
 http://uvadoc.uva.es/bitstream/handle/10324/14120/TFG-G1192.pdf?sequence=1&isAllowed=y
+
+Esteban Mínguez, S. (2015). Solución a un problema de Rendimiento en MySQL. Optimización de UVa Online Judge.
 
 ---
 

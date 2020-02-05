@@ -1,6 +1,23 @@
 \section{Planteamiento del problema}
+
+¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos relacionales?
+
+En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID}.
+
+
+
+% En un diseño común de una base de datos relacional, es común encontrarse con realizar la desición de qué esquema de base de datos relacional utilizar para el desarrollo de.
+% Nota para el autor. ¿Qué casos de uso específicos voy a resolver? ¿Sólo haré pruebas para BD relacionales, con índices con signo? ¿O datos en general?% A partir de la evaluación de diversos factores, podemos llegar a la conclusión de que
+
 \subsection{Antecedentes}\label{sec:Ant}
 
+\begin{quote}
+   Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
+   \cite{Schwartz_2012}
+\end{quote}
 
-
+\begin{quote}
+   Fewer CPU cycles are typically required to process operations on simpler data types. For example, integers are cheaper to compare than characters, because character sets and collations (sorting rules) make character comparisons complicated.
+   \cite{Schwartz_2012}
+\end{quote}
 \subsection{Definición del problema}
