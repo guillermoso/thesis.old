@@ -1,8 +1,10 @@
 \section{Planteamiento del problema}
 
-¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos relacionales?
+%¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos relacionales?
 
-En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID}.
+En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID} \cite{Schwartz_2012}.
+
+En diversos manuales para el diseño de las bases de datos, se menciona que no existe diferencia en el rendimiento entre números con signo y sin signo, al usarlos como índices, y que el único factor a tomar en cuenta es la posibilidad futura de requerir un índice con un valor negativo, o uno con un tamaño mayor a lo que permite el límite superior de los índices, el cual es menor en el caso de los números sin signo.
 
 
 
