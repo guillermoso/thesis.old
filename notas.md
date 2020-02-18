@@ -97,3 +97,5 @@ Esteban Mínguez, S. (2015). Solución a un problema de Rendimiento en MySQL. Op
 http://bbs.linuxtone.org/docs/ebooks/MySQL/performance-tuning-best-practices.pdf
 
 ---
+
+# Experimento o metodología

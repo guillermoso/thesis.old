@@ -6,12 +6,12 @@ En el diseño de las bases de datos relacionales, uno de los campos con más rel
 
 En diversos manuales para el diseño de las bases de datos, se menciona que no existe diferencia en el rendimiento entre números con signo y sin signo, al usarlos como índices, y que el único factor a tomar en cuenta es la posibilidad futura de requerir un índice con un valor negativo, o uno con un tamaño mayor a lo que permite el límite superior de los índices, el cual es menor en el caso de los números sin signo.
 
-
-
-% En un diseño común de una base de datos relacional, es común encontrarse con realizar la desición de qué esquema de base de datos relacional utilizar para el desarrollo de.
+% En un diseño común de una base de datos relacional, es común encontrarse con realizar la decisión de qué esquema de base de datos relacional utilizar para el desarrollo de.
 % Nota para el autor. ¿Qué casos de uso específicos voy a resolver? ¿Sólo haré pruebas para BD relacionales, con índices con signo? ¿O datos en general?% A partir de la evaluación de diversos factores, podemos llegar a la conclusión de que
 
-\subsection{Antecedentes}\label{sec:Ant}
+\subsection{Antecedentes}
+
+
 
 \begin{quote}
    Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
