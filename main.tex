@@ -2,10 +2,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx,titling}
+\usepackage[normalem]{ulem}
 
 \usepackage{url} % For URL's as cites
 
-\title{Impacto en el rendimiento de los números sin signo en las bases de datos relacionales}
+\title{Metodología para la evaluación del impacto en el rendimiento de los números sin signo en las bases de datos relacionales}
 \author{Teo González Calzada}
 
 \date{\today}
@@ -26,13 +27,15 @@
 % \clearpage
 %\maketitle
 
-\include{capitulos/planteamiento}
-% \include{capitulos/justificacion}
-% \include{capitulos/marco}
-% \include{capitulos/objetivo}
-% \include{capitulos/objetivos}
-% \include{capitulos/metas}
-% \include{capitulos/cronograma}
+\input{capitulos/planteamiento}
+\input{capitulos/justificacion}
+% \input{capitulos/marco}
+\input{capitulos/objetivo}
+% \input{capitulos/objetivos}
+% \input{capitulos/metas}
+% \input{capitulos/cronograma}
+
+\clearpage
 
 \bibliographystyle{ieeetr}
 \bibliography{biblio}

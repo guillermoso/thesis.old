@@ -1,25 +1,24 @@
 \section{Planteamiento del problema}
 
-%¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos relacionales?
+En un diseño común de una base de datos relacional, es común encontrarse con realizar la decisión de qué esquema de base de datos relacional utilizar para el desarrollo de.
 
-En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID} \cite{Schwartz_2012}.
-
-En diversos manuales para el diseño de las bases de datos, se menciona que no existe diferencia en el rendimiento entre números con signo y sin signo, al usarlos como índices, y que el único factor a tomar en cuenta es la posibilidad futura de requerir un índice con un valor negativo, o uno con un tamaño mayor a lo que permite el límite superior de los índices, el cual es menor en el caso de los números sin signo.
-
-% En un diseño común de una base de datos relacional, es común encontrarse con realizar la decisión de qué esquema de base de datos relacional utilizar para el desarrollo de.
 % Nota para el autor. ¿Qué casos de uso específicos voy a resolver? ¿Sólo haré pruebas para BD relacionales, con índices con signo? ¿O datos en general?% A partir de la evaluación de diversos factores, podemos llegar a la conclusión de que
 
 \subsection{Antecedentes}
 
+En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID}.
 
+En diversos manuales para el diseño de las bases de datos, se menciona que no existe diferencia en el rendimiento entre números con signo y sin signo, al usarlos como índices, y que el único factor a tomar en cuenta es la posibilidad futura de requerir un índice con un valor negativo, o uno con un tamaño mayor a lo que permite el límite superior de los índices, el cual es menor en el caso de los números sin signo \cite{Schwartz_2012}.
 
 \begin{quote}
-   Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
+   "Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range."
    \cite{Schwartz_2012}
 \end{quote}
 
-\begin{quote}
-   Fewer CPU cycles are typically required to process operations on simpler data types. For example, integers are cheaper to compare than characters, because character sets and collations (sorting rules) make character comparisons complicated.
-   \cite{Schwartz_2012}
-\end{quote}
+Sin embargo, actualmente no existen metodologías concretas para el probar las diferencias de rendimiento entre diversos esquemas de una base de datos relacional. Un ejemplo que tenemos de esto, es el de Mínguez \cite{Minguez_rendimiento}, quien intenta resolver el rendimiento de una base de datos relacional cambiando ciertos campos de su base de datos, pero se encuentra con el problema de que no existe un estándar o una metodología concreta para hacerlo.
+
 \subsection{Definición del problema}
+
+Debido a la falta de metodologías estandarizadas para el llevado a cabo de pruebas de rendimiento de una base de datos, se busca el crear una metodología de pruebas estándar de rendimiento, que pueda ayudar a futuros investigadores a realizar pruebas de rendimiento de una forma estandarizada, repetible y concreta.
+
+Así mismo, se busca el crear un \underline{punto estándar} para la definición correcta de el campo de índice de una base de datos relacional estándar.
