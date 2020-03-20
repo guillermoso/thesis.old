@@ -1,5 +1,14 @@
 \section{Planteamiento del problema}
 
+Gracias a los avances en la tecnología, los precios del cómputo y del almacenamiento de datos se ha ido reduciendo, esto nos abre nuevas posibilidades para el procesamiento, transmisión y almacenamiento de datos para uso a corto y largo plazo.
+
+
+
+Gracias a los avances en la tecnologíaf, los precios de el cómputo y de almacenamiento se han ido reduciendo. Esto abre nuevas posibilidades para el procesamiento, transmisión y almacenamiento de datos a corto y largo plazo. --- Sin embargo, los sistemas de recolección de información meteorológica comúnmente trabajan con los criterios establecidos previamente --- En el desarrollo actual de
+
+
+Con el desarrollo de la tecnología a través de los años, diversas posibilidades que se llegaron a considerar inviables comienzan a ser una opción, los recursos de hardware.
+
 Para el almacenamiento a largo plazo de los datos climatológicos, tales como la temperatura ambiental, la presión barométrica, la velocidad y dirección del viento, así como muchos otros, se ha optado por el obtener los valores discretos cada cierta cantidad de tiempo, generalmente no menor a 5 minutos. % O un minuto? Incluir referencias!
 
 Este volumen de datos ha sido útil para diversos casos de uso, tal como la predicción de clima y demás, sin embargo, para modelos que utilicen un gran volumen de datos históricos, se ha vuelto realmente difícil.
@@ -18,6 +27,9 @@ Para el almacenamiento de datos en
 
 \subsection{Antecedentes}
 
+En la conferencia del 2013 llevada a cabo en Macedonia, Stanchev \cite{Improved_Stanchev} propone un método de compresión de datos
+
+
 Debido a diversos factores como el costo del procesamiento en dispositivos de gama baja /cite{Articulo viejo} y el costo de el almacenamiento en general \cite{Marshall_1994} se optó por el (discretizar, racionalizar) los datos climatológicos en una base de datos, estableciendo un tiempo arbitrario para la recolección de los mismos, y almacenando en las bases de datos el valor discreto de un intervalo de tiempo.
 
 Esto es posible observarlo en uno de los equipos más comerciales para la recolección de datos meteorológicos, los dispositivos de la familia Davis, los cuales permiten establecer un intervalo de tiempo fijo en el que se realiza la recolección de datos. Este intervalo varía en diversas instituciones de 5 a 20 minutos /cite{documento de alguna institución climatologica}, y si bien es útil para el análisis de los datos en ambientes comúnes para el análisis de los datos, carecen de precisión debido a diferentes factores, sobre todo para el análisis de cambios drásticos en lapsos cortos de tiempo.
@@ -26,4 +38,8 @@ Debido al desarrollo y cambio de las tecnologías en los años recientes, se ha 
 
 \subsection{Definición del problema}
 
-En el presente documento, se utilizarán las metodologías y equipo actual para crear un método de almacenamiento de datos meteorológicos (precisamente, temperatura y presión barométrica) con una precisión mayor a la que se tiene actualmente sin aumentar dramáticamente el espacio consumido por los datos, haciendo uso de métodos de compresión que tengan como base transformadas de Fourier.
+
+
+En el presente documento, se hará una propuesta para aprovechar las ventajas que nos ofrecen las tecnologías actuales para crear un método de almacenamiento de datos basado en la compresión de datos
+
+En el presente documento, se hará una propuesta para solucionar la compresión de  y equipo actual para crear un método de almacenamiento de diversos datos meteorológicos, como lo son la temperatura y la presión barométrica,
