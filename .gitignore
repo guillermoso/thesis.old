@@ -1,6 +1,9 @@
 # I don't care about compiled files
 *.pdf
 
+# Remove "In use" files from repo [file.save~]
+*.*~
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
