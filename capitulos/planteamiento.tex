@@ -1,33 +1,19 @@
 \section{Planteamiento del problema}
 
-Gracias a los avances en la tecnología, los precios del cómputo y del almacenamiento de datos se ha ido reduciendo, esto nos abre nuevas posibilidades para el procesamiento, transmisión y almacenamiento de datos para uso a corto y largo plazo.
+El desarrollo de la tecnología a través de los años nos ha permitido (evolucionar) los métodos de almacenamiento y transmisión de datos en diversos ámbitos en los que se aplican las tecnologías de la información, uno de los ámbitos en los que los los avances tecnológicos han ayudado enormemente al desarrollo de el mismo es el de las ciencias meteorológicas.
 
+Un tema recurrente en las tecnologías de la información aplicadas al ámbito de la meteorología es el estudio de diversos métodos para el almacenamiento y distribución de datos, tales como la temperatura, la presión atmosfèrica y la velocidad del viento, con un enfoque orientado a la compresión y fidelidad de los mismos para los fines que se requieran.
 
+En una gran mayoría de las estaciones meteorológicas que son actualmente utilizadas para la recolección de datos, los métodos de recolección, tratamiento y envío de datos ha quedado definido por el equipo de hardware que se posee, y estancado en el tiempo por la falta de innovación o de recursos económicos para continuar mejorándolos.
 
-Gracias a los avances en la tecnologíaf, los precios de el cómputo y de almacenamiento se han ido reduciendo. Esto abre nuevas posibilidades para el procesamiento, transmisión y almacenamiento de datos a corto y largo plazo. --- Sin embargo, los sistemas de recolección de información meteorológica comúnmente trabajan con los criterios establecidos previamente --- En el desarrollo actual de
+Sin embargo, debido a la creciente necesidad de datos con una mayor precisión, así como los diversos problemas que supone la transferencia de datos desde diversos puntos con diversas infraestructuras\dots
 
-
-Con el desarrollo de la tecnología a través de los años, diversas posibilidades que se llegaron a considerar inviables comienzan a ser una opción, los recursos de hardware.
-
-Para el almacenamiento a largo plazo de los datos climatológicos, tales como la temperatura ambiental, la presión barométrica, la velocidad y dirección del viento, así como muchos otros, se ha optado por el obtener los valores discretos cada cierta cantidad de tiempo, generalmente no menor a 5 minutos. % O un minuto? Incluir referencias!
-
-Este volumen de datos ha sido útil para diversos casos de uso, tal como la predicción de clima y demás, sin embargo, para modelos que utilicen un gran volumen de datos históricos, se ha vuelto realmente difícil.
-
-% Es más barato el poder computacional que la transmisión de datos de gran volumen, en este caso de uso específico, es más sencillo comprimir significativamente los datos de una estación climatlógica que se encuentra en un lugar remoto y enviar el paquete como tal, que tener una conexión fiable que pueda soportar enviar datos cada 13 o 14 segundos de manera fiable.
-
-% Se busca crear una implementación que permita el generar archivos de grandes volúmenes de datos, para facilitar la transmisión y almacenamiento. Que sea aplicado específicamente a los dispositivos comerciales de marca Davis y similares, por medio de la plataforma WeewX. Ya que es OpenSource y es una implementación que se usa ampliamente en el ámbito climatológico.
-
-Sirven de algo los grandes volumenes de datos para la prediccion con redes neuronales? Servira de algo el tener velocidades de cambio mas apegadas a la realidad analogica?. De no ser asi, para que estoy haciendo mi tesis?
-
-
-
-Para el almacenamiento de los datos generados por las estaciones climatológicas, se optó por las limitaciones de la época el guardar los valores discretizados de los datos \cite{Marshall_1994}
-
-Para el almacenamiento de datos en
 
 \subsection{Antecedentes}
 
-En la conferencia del 2013 llevada a cabo en Macedonia, Stanchev \cite{Improved_Stanchev} propone un método de compresión de datos
+El ámbito del
+
+En el año 2013 Stanchev \cite{Improved_Stanchev} propone un método de compresión de datos
 
 
 Debido a diversos factores como el costo del procesamiento en dispositivos de gama baja /cite{Articulo viejo} y el costo de el almacenamiento en general \cite{Marshall_1994} se optó por el (discretizar, racionalizar) los datos climatológicos en una base de datos, estableciendo un tiempo arbitrario para la recolección de los mismos, y almacenando en las bases de datos el valor discreto de un intervalo de tiempo.
