@@ -6,14 +6,14 @@ Un tema recurrente en las tecnologías de la información aplicadas al ámbito d
 
 En una gran mayoría de las estaciones meteorológicas que son actualmente utilizadas para la recolección de datos, los métodos de recolección, tratamiento y envío de datos ha quedado definido por el equipo de hardware que se posee, y estancado en el tiempo por la falta de innovación o de recursos económicos para continuar mejorándolos.
 
-Sin embargo, debido a la creciente necesidad de datos con una mayor precisión, así como los diversos problemas que supone la transferencia de datos desde diversos puntos con diversas infraestructuras\dots
-
+% Nota, creo que se hace más necesario el implementar protocolos. Pero supongo que esa no es la palabra adecuada para el contexto. NO voy a crear un protocolo completamente nuevo para la transmisión y/o almacenamiento de datos. Lo que voy a hacer es implementar un método de compresión de datos para los datos meteorológicos.
+Sin embargo, debido a la creciente necesidad de datos con una mayor precisión, así como los diversos problemas que supone la transferencia de datos desde diversos puntos con diversas infraestructuras\dots la cantidad cada ves más creciente de estaciones meteorológicas utilizando un sólo servidor \dots se hace más evidente la necesidad de implementar métodos más eficientes para el almacenamiento de los datos recolectados por las estaciones meteorológicas.
 
 \subsection{Antecedentes}
 
-El ámbito del
+La guía para los instrumentos meteorológicos y métodos de observacion, publicada por la Organización Meteorológica Mundial (OMM en adelante) establece una serie de criterios los cuales deben ser utilizados para una \cite{CIMO_2008}
 
-En el año 2013 Stanchev \cite{Improved_Stanchev} propone un método de compresión de datos
+En el año 2013 al \cite{Improved_Stanchev} propone un método de compresión de datos
 
 
 Debido a diversos factores como el costo del procesamiento en dispositivos de gama baja /cite{Articulo viejo} y el costo de el almacenamiento en general \cite{Marshall_1994} se optó por el (discretizar, racionalizar) los datos climatológicos en una base de datos, estableciendo un tiempo arbitrario para la recolección de los mismos, y almacenando en las bases de datos el valor discreto de un intervalo de tiempo.
@@ -24,8 +24,8 @@ Debido al desarrollo y cambio de las tecnologías en los años recientes, se ha 
 
 \subsection{Definición del problema}
 
-
+Dadas las crecientes necesidades por tener tantas estaciones meteorológicas, y que algunas tienen pésima conexión a internet, necesitamos implementar un método para la compresión de datos meteorológicos que no comprometa enormemente la integridad de los datos.
 
 En el presente documento, se hará una propuesta para aprovechar las ventajas que nos ofrecen las tecnologías actuales para crear un método de almacenamiento de datos basado en la compresión de datos
 
-En el presente documento, se hará una propuesta para solucionar la compresión de  y equipo actual para crear un método de almacenamiento de diversos datos meteorológicos, como lo son la temperatura y la presión barométrica,
+
