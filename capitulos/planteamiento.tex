@@ -1,23 +1,35 @@
 \section{Planteamiento del problema}
 
-¿El uso de los enteros con signo afecta a el rendimiento de las bases de datos relacionales?
+El desarrollo de la tecnología a través de los años nos ha permitido (evolucionar) los métodos de almacenamiento y transmisión de datos en diversos ámbitos en los que se aplican las tecnologías de la información, uno de los ámbitos en los que los los avances tecnológicos han ayudado enormemente al desarrollo de el mismo es el de las ciencias meteorológicas.
 
-En el diseño de las bases de datos relacionales, uno de los campos con más relevancia para el funcionamiento correcto de las mismas es el que es designado como llave primaria para las relaciones entre las tablas de las mismas, generalmente referido como \textit{ID}.
+Un tema recurrente en las tecnologías de la información aplicadas al ámbito de la meteorología es el estudio de diversos métodos para el almacenamiento y distribución de datos, tales como la temperatura, la presión atmosfèrica y la velocidad del viento, con un enfoque orientado a la compresión y fidelidad de los mismos para los fines que se requieran.
+
+En una gran mayoría de las estaciones meteorológicas que son actualmente utilizadas para la recolección de datos, los métodos de recolección, tratamiento y envío de datos ha quedado definido por el equipo de hardware que se posee, y estancado en el tiempo por la falta de innovación o de recursos económicos para continuar mejorándolos.
+
+% Nota, creo que se hace más necesario el implementar protocolos. Pero supongo que esa no es la palabra adecuada para el contexto. NO voy a crear un protocolo completamente nuevo para la transmisión y/o almacenamiento de datos. Lo que voy a hacer es implementar un método de compresión de datos para los datos meteorológicos.
+Sin embargo, debido a la creciente necesidad de datos con una mayor precisión, así como los diversos problemas que supone la transferencia de datos desde diversos puntos con diversas infraestructuras\dots la cantidad cada ves más creciente de estaciones meteorológicas utilizando un sólo servidor \dots se hace más evidente la necesidad de implementar métodos más eficientes para el almacenamiento de los datos recolectados por las estaciones meteorológicas.
+
+\subsection{Antecedentes}
+
+La guía para los instrumentos meteorológicos y métodos de observacion, publicada por la Organización Meteorológica Mundial (OMM en adelante) establece una serie de criterios los cuales deben ser utilizados para una \cite{CIMO_2008}
+
+En el año 2013 al \cite{Improved_Stanchev} propone un método de compresión de datos
 
 
+Debido a diversos factores como el costo del procesamiento en dispositivos de gama baja /cite{Articulo viejo} y el costo de el almacenamiento en general \cite{Marshall_1994} se optó por el (discretizar, racionalizar) los datos climatológicos en una base de datos, estableciendo un tiempo arbitrario para la recolección de los mismos, y almacenando en las bases de datos el valor discreto de un intervalo de tiempo.
 
-% En un diseño común de una base de datos relacional, es común encontrarse con realizar la desición de qué esquema de base de datos relacional utilizar para el desarrollo de.
-% Nota para el autor. ¿Qué casos de uso específicos voy a resolver? ¿Sólo haré pruebas para BD relacionales, con índices con signo? ¿O datos en general?% A partir de la evaluación de diversos factores, podemos llegar a la conclusión de que
+Esto es posible observarlo en uno de los equipos más comerciales para la recolección de datos meteorológicos, los dispositivos de la familia Davis, los cuales permiten establecer un intervalo de tiempo fijo en el que se realiza la recolección de datos. Este intervalo varía en diversas instituciones de 5 a 20 minutos /cite{documento de alguna institución climatologica}, y si bien es útil para el análisis de los datos en ambientes comúnes para el análisis de los datos, carecen de precisión debido a diferentes factores, sobre todo para el análisis de cambios drásticos en lapsos cortos de tiempo.
 
-\subsection{Antecedentes}\label{sec:Ant}
-
-\begin{quote}
-   Signed and unsigned types use the same amount of storage space and have the same performance, so use whatever’s best for your data range.
-   \cite{Schwartz_2012}
-\end{quote}
+Debido al desarrollo y cambio de las tecnologías en los años recientes, se ha vuelto más económico el procesamiento y almacenamiento de datos, lo cual nos permite el establecer uevas metodologías para el procesamiento de los mismos en un ámbito común.
 
 \begin{quote}
    Fewer CPU cycles are typically required to process operations on simpler data types. For example, integers are cheaper to compare than characters, because character sets and collations (sorting rules) make character comparisons complicated.
    \cite{Schwartz_2012}
 \end{quote}
 \subsection{Definición del problema}
+
+Dadas las crecientes necesidades por tener tantas estaciones meteorológicas, y que algunas tienen pésima conexión a internet, necesitamos implementar un método para la compresión de datos meteorológicos que no comprometa enormemente la integridad de los datos.
+
+En el presente documento, se hará una propuesta para aprovechar las ventajas que nos ofrecen las tecnologías actuales para crear un método de almacenamiento de datos basado en la compresión de datos
+
+
