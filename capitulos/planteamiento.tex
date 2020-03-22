@@ -2,34 +2,22 @@
 
 El desarrollo de la tecnología a través de los años nos ha permitido (evolucionar) los métodos de almacenamiento y transmisión de datos en diversos ámbitos en los que se aplican las tecnologías de la información, uno de los ámbitos en los que los los avances tecnológicos han ayudado enormemente al desarrollo de el mismo es el de las ciencias meteorológicas.
 
-Un tema recurrente en las tecnologías de la información aplicadas al ámbito de la meteorología es el estudio de diversos métodos para el almacenamiento y distribución de datos, tales como la temperatura, la presión atmosfèrica y la velocidad del viento, con un enfoque orientado a la compresión y fidelidad de los mismos para los fines que se requieran.
+Un tema recurrente en las tecnologías de la información aplicadas al ámbito de la meteorología es el estudio de diversos métodos para el almacenamiento y distribución de datos, tales como la temperatura, la presión atmosférica y la velocidad del viento, con un enfoque orientado a la compresión y fidelidad de los mismos para los fines que se requieran.
 
-En una gran mayoría de las estaciones meteorológicas que son actualmente utilizadas para la recolección de datos, los métodos de recolección, tratamiento y envío de datos ha quedado definido por el equipo de hardware que se posee, y estancado en el tiempo por la falta de innovación o de recursos económicos para continuar mejorándolos.
+En una gran mayoría de las estaciones meteorológicas que son actualmente utilizadas para la recolección de datos, los métodos de recolección, tratamiento y envío de datos ha quedado definido por el equipo de hardware que se posee, y estancado en el tiempo por la falta de innovación o de recursos económicos para continuar mejorándolos. Esto provoca que se vuelva una tarea complicada el expandir los sistemas existentes o integrarlos con redes de recolección más grandes
 
 % Nota, creo que se hace más necesario el implementar protocolos. Pero supongo que esa no es la palabra adecuada para el contexto. NO voy a crear un protocolo completamente nuevo para la transmisión y/o almacenamiento de datos. Lo que voy a hacer es implementar un método de compresión de datos para los datos meteorológicos.
-Sin embargo, debido a la creciente necesidad de datos con una mayor precisión, así como los diversos problemas que supone la transferencia de datos desde diversos puntos con diversas infraestructuras\dots la cantidad cada ves más creciente de estaciones meteorológicas utilizando un sólo servidor \dots se hace más evidente la necesidad de implementar métodos más eficientes para el almacenamiento de los datos recolectados por las estaciones meteorológicas.
 
 \subsection{Antecedentes}
 
-La guía para los instrumentos meteorológicos y métodos de observacion, publicada por la Organización Meteorológica Mundial (OMM en adelante) establece una serie de criterios los cuales deben ser utilizados para una \cite{CIMO_2008}
+Recientemente, se ha demostrado que es necesaria la alta densidad de datos climatológicos \cite{warren2016birmingham} para el desarrollo de metodologías y para la toma de decisiones en materia climatológica y ambiental. Para suplir con esa necesidad, se crearon las redes meteorológicas urbanas, las cuales proveen sistemas de alta densidad de datos para áreas urbanas.
 
-En el año 2013 al \cite{Improved_Stanchev} propone un método de compresión de datos
+Como mencionan Muller \textit{et all} \cite{doi:10.1002/joc.3678} las estaciones meteorológicas tradicionales son costosas y complicadas de mantener, sin embargo, con el desarrollo de las nuevas tecnologías, los costos se han reducido y han aparecido alternativas económicas \cite{hernandezimplementacion} para el monitoreo de datos ambientales, lo cual abre la posibilidad a crear redes mas densas a menor costo para la recolección de datos.
 
+Como se indica en la guía de bolsillo para la observación meteorológica \cite{Handbook_2000}, es recomendable tomar los datos dentro de un periodo de un minuto para el análisis posterior a corto y largo plazo. Esto hace que una red de estaciones relativamente grande aporte un tráfico considerable a los sistemas de servidores para el almacenamiento y análisis de datos.
 
-Debido a diversos factores como el costo del procesamiento en dispositivos de gama baja /cite{Articulo viejo} y el costo de el almacenamiento en general \cite{Marshall_1994} se optó por el (discretizar, racionalizar) los datos climatológicos en una base de datos, estableciendo un tiempo arbitrario para la recolección de los mismos, y almacenando en las bases de datos el valor discreto de un intervalo de tiempo.
+En el año 2013 Stanchev \textit{et al} \cite{Improved_Stanchev} proponen un método de compresión de datos basado en transformaciones de ondícula, el cual tiene como objetivo el facilitar la transmisión de los datos meteorológicos de las estaciones que se conectan por medio de telefonía celular \textit{GPRS}. Esto, debido a que el acceso a internet es limitado en ciertas áreas donde se tienen estaciones meteorológicas, lo cual hace crítico para la operación correcta de las estaciones el aprovechar al máximo el ancho de banda que se tiene.
 
-Esto es posible observarlo en uno de los equipos más comerciales para la recolección de datos meteorológicos, los dispositivos de la familia Davis, los cuales permiten establecer un intervalo de tiempo fijo en el que se realiza la recolección de datos. Este intervalo varía en diversas instituciones de 5 a 20 minutos /cite{documento de alguna institución climatologica}, y si bien es útil para el análisis de los datos en ambientes comúnes para el análisis de los datos, carecen de precisión debido a diferentes factores, sobre todo para el análisis de cambios drásticos en lapsos cortos de tiempo.
-
-Debido al desarrollo y cambio de las tecnologías en los años recientes, se ha vuelto más económico el procesamiento y almacenamiento de datos, lo cual nos permite el establecer uevas metodologías para el procesamiento de los mismos en un ámbito común.
-
-\begin{quote}
-   Fewer CPU cycles are typically required to process operations on simpler data types. For example, integers are cheaper to compare than characters, because character sets and collations (sorting rules) make character comparisons complicated.
-   \cite{Schwartz_2012}
-\end{quote}
 \subsection{Definición del problema}
 
-Dadas las crecientes necesidades por tener tantas estaciones meteorológicas, y que algunas tienen pésima conexión a internet, necesitamos implementar un método para la compresión de datos meteorológicos que no comprometa enormemente la integridad de los datos.
-
-En el presente documento, se hará una propuesta para aprovechar las ventajas que nos ofrecen las tecnologías actuales para crear un método de almacenamiento de datos basado en la compresión de datos
-
-
+Dado que las redes de recolección de datos meteorológicos crecen, se vuelve necesario diseñar e implementar un método para la compresión de datos meteorológicos escalable para poder mantener altos niveles de densidad de datos, sin comprometer gravemente la fiabilidad o la calidad de los mismos.
